@@ -2,9 +2,13 @@ using UnityEngine;
 
 public class Scorer : MonoBehaviour
 {
-    int hits = 0;
+    [SerializeField] int hits = 0;
     private void OnCollisionEnter(Collision collision)
     {
-        hits++;
+        if(collision.gameObject.tag != "Hit")
+        {
+            hits++;
+        }
+        
     }
 }

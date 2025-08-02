@@ -13,10 +13,9 @@ public class Mover : MonoBehaviour
     
     private Rigidbody rb;
     [SerializeField] private bool isGrounded;
-  
+
     void Start()
     {
-        PrintInstruction();
         rb = GetComponent<Rigidbody>();
 
         // find child named "GroundCheck"
@@ -61,10 +60,5 @@ public class Mover : MonoBehaviour
         }
 
         //transform.Translate(xValue, 0, zValue); 
-    }
-
-    void PrintInstruction()
-    {
-        Debug.Log("Welcome to the game");
     }
 }
